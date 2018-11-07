@@ -1,0 +1,142 @@
+<html>
+
+<head>
+  <title>Holiday Poster</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- <div class="size-blocker">
+    <p>Please reduce the width of your browser window until you can see the poster.</p>
+  </div> -->
+  <!-- <a href="poster2.html"><div class="arrows prev"></div></a>
+  <a href="poster4.html"><div class="arrows next"></div></a> -->
+  <div class="p03-outer-container">
+    <div class="poster03-container">
+      <div class="item1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 100 100" preserveAspectRatio="none" class="paper">
+        <path d="M 0 0 C 0 0, 0 0, 25 100" class="stroke B" />
+        <path d="M 25 100 C 25 100, 50 0, 50 0" class="stroke" />
+        <path d="M 50 0 C 50 0, 75 100, 75 100" class="stroke B" />
+        <path d="M 75 100 C 75 100, 100 0, 100 0" class="stroke" />
+        </svg>
+        <audio id="item_1">
+          <source src="./piano-mp3/B2.mp3" type="audio/mpeg"></source>
+        </audio>
+      </div>
+      <div class="item2">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1000 200" preserveAspectRatio="none" class="paper">
+        <path d="M 0 0 C 0 100, 1000 100, 1000 200, 1000 0 1000 0, " class="stroke uber" /></svg>
+        <div class="innertext bottomLeft">
+          We at The New School wish you a Merry Christmas and a Happy New Year.
+        </div>
+        <audio id="item_2">
+          <source src="./piano-mp3/A1.mp3" type="audio/mpeg"></source>
+        </audio>
+      </div>
+      <div class="item3">
+        <div class="text-it2">
+           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 100 100" preserveAspectRatio="none" class="paper">
+           <path d="M 50 0 C 50 0, 50 100, 50 100" class="stroke" />
+           <path d="M 0 0 C 0 0, 100 0, 100 0" class="stroke B" />
+           </svg>
+           <div class="innerText bottomRight">
+             We at The New School wish you a Merry Christmas and a Happy New Year.
+           </div>
+           <audio id="item_3">
+             <source src="./piano-mp3/C2.mp3" type="audio/mpeg"></source>
+           </audio>
+        </div></div>
+        <div class="item4">
+          <div class="text-it4">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 100 100" preserveAspectRatio="none" class="paper">
+            <path d="M 0 0 C 0 0, 0 0, 50 100" class="stroke B" />
+            <path d="M 50 100 C 50 100, 100 0, 100 0" class="stroke" />
+            </svg>
+          </div>
+          <audio id="item_4">
+            <source src="./piano-mp3/D2.mp3" type="audio/mpeg"></source>
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="label label-topright"> <span style="letter-spacing: -1pt">&mdash;&mdash;</span> Poster 03 <br /> helloshivam.com</div>
+  <div class="label label-botright"> &mdash; Employment</div>
+  <div class="label-midleft"><span style="letter-spacing: -1pt">&mdash;&mdash;</span> Interaction Poster</div>
+
+  <!-- <div class="reset">
+    <i class="fas fa-sync"></i>
+  </div> -->
+</body>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $("body").get(0).style.setProperty("--bg-color", "#DFE1E0"); $("body").get(0).style.setProperty("--supp-colors", "#CF0712");
+
+  $('.reset').click(function() {
+    window.location.reload();
+  });
+
+  $('.item2').hover(function() {
+    $('.item1').css('width', '25%');
+    $('.item1').css('height', '75%');
+    $('.item3').css('width', '25%');
+    $('.item3').css('height', '25%');
+  }, function() {
+    $('.item1').css('width', '');
+    $('.item1').css('height', '');
+    $('.item3').css('width', '');
+    $('.item3').css('height', '');
+  });
+
+  $('.item3').hover(function() {
+    $('.item1').css('width', '85%');
+    $('.item1').css('height', '30%');
+    $('.item2').css('width', '15%');
+    $('.item2').css('height', '30%');
+  }, function() {
+    $('.item1').css('width', '');
+    $('.item1').css('height', '');
+    $('.item2').css('width', '');
+    $('.item2').css('height', '');
+  });
+
+  $('.item4').hover(function() {
+    $('.item1').css('width', '20%');
+    $('.item2').css('width', '80%');
+    $('.item2').css('height', '15%');
+    $('.item3').css('width', '20%');
+  }, function() {
+    $('.item1').css('width', '');
+    $('.item2').css('width', '');
+    $('.item2').css('height', '');
+    $('.item3').css('width', '');
+  });
+
+  $(".item1").hover(function() {
+    item_1.play();
+    // obj.pause();
+  });
+  $(".item2").hover(function() {
+    item_2.play();
+    // obj.pause();
+  });
+  $(".item3").hover(function() {
+    item_3.play();
+    // obj.pause();
+  });
+  $(".item4").hover(function() {
+    item_4.play();
+    // obj.pause();
+  });
+});
+</script>
+</html>
