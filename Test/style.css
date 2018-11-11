@@ -1,0 +1,177 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+}
+
+.p03-outer-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster03-container {
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 85%;
+  /* border: 2.5px white solid; */
+}
+
+.topLeft {
+  top:0;
+  left:0;
+}
+
+.topRight {
+  top: 0;
+  right: 0;
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+}
+
+.bottomRight {
+  text-align: right;
+  bottom: 0;
+  right: 0;
+}
+
+.item1 {
+  width: 50%;
+  height: 65%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all .5s ease;
+}
+
+.item1:hover {
+  width: 65%;
+  height: 70%;
+}
+
+.item1:hover ~ .item2 {
+  width: 35%;
+}
+
+.item1:hover ~ .item3 {
+  height: 30%;
+  width: 65%;
+}
+
+.item1:hover ~ .item4 {
+  width: 25%;
+}
+
+.item2 {
+  width: 50%;
+  height: 35%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all .5s ease;
+}
+
+.item2:hover {
+  width: 75%;
+  height: 50%;
+}
+
+.item2:hover ~ .item4 {
+  height: 50%;
+  width: 75%;
+}
+
+.item3 {
+  width: 50%;
+  height: 35%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all .5s ease;
+}
+
+.item3:hover {
+  width: 85%;
+  height: 70%;
+}
+
+.item3:hover + .item4 {
+  width: 15%;
+  height: 70%;
+}
+
+.item4 {
+  width: 50%;
+  height: 65%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: all .5s ease;
+}
+
+.item4:hover {
+  width: 80%;
+  height: 85%;
+}
+
+.item1, .item2, .item3, .item4 {
+  display: block!important;
+}
+
+.text-it1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+  font-size: 7.5vw;
+  word-break: break-all;
+}
+
+.text-it2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+  font-size: 7.5vw;
+  word-break: break-all;
+}
+
+.text-it4  {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+  font-size: 7.5vw;
+  word-break: break-all;
+}
+
+.stroke {
+ fill: transparent;
+ stroke-linecap: round;
+ vector-effect: non-scaling-stroke;
+ stroke-width: 10.75px;
+ stroke: var(--supp-colors);
+ stroke-dasharray:0, 0;
+}
+
+.paper {
+ pointer-events: none;
+ width: 100%;
+ height: 100%;
+ overflow: visible;
+ preserveAspetRatio: none;
+ position: absolute;
+ z-index: 10;
+}
+
+.border {
+ position: absolute;
+ top: 2vh;
+ bottom: 2vh;
+ left: 2vh;
+ right: 2vh;
+}
